@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
+        <title>Social Media Quiz</title>
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2:500|Bellota:700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Sigature Font Style -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+        </style>    
+
+    </head>
+
+    <body id="main">
+
+        <div id="welcome" >
+            <label>
+                <span id="msg1">Welcome to</span><br>
+                <span id="msg2">Social Media Quiz !</span>
+            </label><br>
+            <input class="btn" type="button" value="start !" onclick="start()">
+        </div>
+          
+        <!-- First Question -->
+        <div id="mainDiv" style="display: none;">
+            <label class="ques">In which of these Social Media sites you visit daily ?</label><br>
+            <div class="options" >
+                <input type="checkbox" id="W"><img src="Whatsapp.png" class="icon"><label class="opt">What's App</label><br>
+                <input type="checkbox" id="F"><img src="Facebook.png" class="icon"><label class="opt">Facebook</label><br>
+                <input type="checkbox" id="I"><img src="Instagram.png" class="icon"><label class="opt">InstaGram</label><br>
+                <input type="checkbox" id="TT"><img src="Tik - Tok.jpg" class="icon"><label class="opt">Tik - Tok</label><br>
+                <input type="checkbox" id="T"><img src="Telegram.png" class="icon"><label class="opt">TeleGram</label><br>
+                <label id="warn1"></label>
+            </div>
+            
+            <input type="button" class="btn" value="Next !" onclick="ques1()">
+
+        </div>
+
+        <!-- Second Question -->
+        <div id="secDiv" style="display: none;">
+            <label class="ques">How much time you spend in those Social Media sites daily ? </label><br>
+            <div class="options">
+                <input type="radio" id="t1" name="sec"><label class="opt">> 3hrs</label><br>
+                <input type="radio" id="t2" name="sec"><label class="opt">1 - 3hrs</label><br>
+                <input type="radio" id="t3" name="sec"><label class="opt">30mins</label><br>
+                <input type="radio" id="t4" name="sec"><label class="opt">< 30mins</label><br>
+                <label id="warn2"></label>
+            </div>
+            <input type="button" class="btn" value="Next !" onclick="ques2()">
+        </div>
+
+        <!-- Third Question -->
+        <div id="thiDiv" style="display: none;">
+            <label class="ques">Do you see status of your friends daily ?</label><br>
+            <div class="options">
+                <input type="radio" id="st1" name="thi"><label class="opt">Yes</label><br>
+                <input type="radio" id="st2" name="thi" ><label class="opt">Rarely</label><br>
+                <input type="radio" id="st3" name="thi"><label class="opt">No !</label><br>
+                <label id="warn3"></label>
+            </div>
+            <input type="button" class="btn" value="Next !" onclick="tik1()">
+        </div>
+
+        <!-- Special Divs for Tik - Tok -->
+        <div id="tikDiv1" style="display: none;">
+            <label class="ques">Do you watch Tik - Tok videos daily ?</label><br>
+            <div class="options">
+                <input type="radio" id="tt1" name="tik1"><label class="opt">Yes</label><br>
+                <input type="radio" id="tt2" name="tik1"><label class="opt">Rarely</label><br>
+                <input type="radio" id="tt3" name="tik1"><label class="opt">No !</label><br>
+                <label id="warn4"></label>
+            </div>
+            <input type="button" class="btn" value="Next !" onclick="tik2()">
+        </div>
+
+        <div id="tikDiv2" style="display: none;">
+            <label class="ques">Do you upload Tik - Tok videos daily ?</label><br>
+            <div class="options">
+                <input type="radio" id="tt11" name="tik2"><label class="opt">Yes</label><br>
+                <input type="radio" id="tt22" name="tik2"><label class="opt">Rarely</label><br>
+                <input type="radio" id="tt33" name="tik2"><label class="opt">No !</label><br>
+                <label id="warn5"></label>
+            </div>
+            <input type="button" class="btn" value="Next !" onclick="res()">
+        </div>
+
+        <!-- Result Div -->
+        <div id="resDiv" style="display: none;">
+            <label id="res"><u>Result</u></label><br>
+            <img id="img" ><br>
+            <label id="resMsg"></label>
+        </div>
+        
+        <label id="lab"></label>
+        <script src="script.js"></script>
+
+        <div id="signature">
+            <span style="font-family: 'Dancing Script', cursive;">Developed by</span><br>    
+            <span style="font-family: 'Pacifico', cursive;">T . Ziya ...</span>
+        </div>
+    </body>
+
+    <script>
+        document.querySelector("#main").setAttribute("style", "height: " + window.innerHeight + "px;");
+    </script>
+</html>
